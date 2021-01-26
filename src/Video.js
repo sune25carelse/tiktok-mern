@@ -4,7 +4,7 @@ import './Video.css';
 function Video() {
   return (
     <div className="video">
-      <video src=""></video>
+      <video src=" "></video>
       
       {/* VideoFooter */}
       {/* VideoSidebar */}
