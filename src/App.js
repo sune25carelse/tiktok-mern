@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h2>building Tiktok mern lets gooo🚀🚀🚀</h2>
+      <h1>building Tiktok mern lets gooo🚀🚀🚀</h1>
     </div>
   );
 }
