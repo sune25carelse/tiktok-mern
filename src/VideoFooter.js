@@ -13,13 +13,18 @@ function VideoFooter() {
               <MusicNoteIcon className="videoFooter__icon"/>
               <Ticker mode="smooth">
                   {({ index }) => (
-                      <>
+                    <>
                       <p>I am a Song</p>
-                      </>
+                    </>
                   )}
               </Ticker>
           </div>
       </div>
+      <img
+        className="videoFooter__record"
+        src="https://seeklogo.net/wp-content/uploads/2012/11/liverbir-vector-logo-400x400.png"
+        alt=""
+      />
     </div>
   );
 }
