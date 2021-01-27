@@ -1,12 +1,16 @@
+import React from "react";
 import './App.css';
-import Video from './Video';
+import Video from "./Video";
 
 function App() {
   return (
-    <div className="App">
-      <h1>building Tiktok mern lets gooo🚀🚀🚀</h1>
-      
-      <Video />
+    <div className="app">
+      <h1>🚀🚀🚀</h1>
+
+      <div className="app__videos">
+        <Video />
+        <Video />
+      </div>
     </div>
   );
 }
