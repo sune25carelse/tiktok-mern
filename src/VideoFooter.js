@@ -8,7 +8,7 @@ function VideoFooter() {
     <div className="videoFooter">
       <div className="videoFooter__text">
           <h3>@Luca</h3>
-          <p>Description</p>
+          <p>This is some description</p>
           <div className="videoFooter__ticker">
               <MusicNoteIcon className="videoFooter__icon"/>
               <Ticker mode="smooth">

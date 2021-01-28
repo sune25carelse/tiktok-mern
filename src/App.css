@@ -25,5 +25,6 @@ html {
 
 .app__videos {
   -ms-text-overflow: none;
+  text-overflow: none;
   scrollbar-width: none;
 }
