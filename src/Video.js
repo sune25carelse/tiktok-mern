@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './Video.css';
 import VideoFooter from './VideoFooter';
+import VideoSidebar from './VideoSidebar';
 
 function Video() {
   const [playing, setPlyaing] = useState(false);
@@ -19,14 +20,14 @@ function Video() {
   return (
     <div className="video">
       <video
-      onClick={handleVideoPress}
+        onClick={handleVideoPress}
         className="video__player"
         loop
         ref={videoRef}
         src="https://static.videezy.com/system/resources/previews/000/005/575/original/matrix.mp4"></video>
 
       <VideoFooter />
-      {/* VideoSidebar */}
+      <VideoSidebar />
     </div>
   )
 }
