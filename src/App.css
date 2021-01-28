@@ -13,18 +13,19 @@ html {
   position: relative;
   height: 800px;
   border-radius: 20px;
+  overflow: scroll;
   width: 80%;
   max-width: 500px;
-  overflow: scroll;
   scroll-snap-type: y mandatory;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
 .app__videos::-webkit-scrollbar {
   display: none;
 }
 
+/* Hide scrollbar for IE, Edge and Firefox */
 .app__videos {
-  -ms-text-overflow: none;
-  text-overflow: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

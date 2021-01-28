@@ -8,8 +8,23 @@ function App() {
       <h1>🚀🚀🚀</h1>
 
       <div className="app__videos">
-        <Video url="https://static.videezy.com/system/resources/previews/000/005/575/original/matrix.mp4" />
-        <Video />
+        <Video url="https://static.videezy.com/system/resources/previews/000/005/575/original/matrix.mp4"
+              channel="luca"
+              song="kickin it late yeah"
+              likes={1223}
+              messages={456}
+              description="it f**kn works"
+              shares={789}
+        />
+        <Video 
+          url="https://static.videezy.com/system/resources/previews/000/005/575/original/matrix.mp4"
+          channel="luca"
+          song="Kickin it late yeah!!!"
+          likes={1223}
+          messages={456}
+          description="it works"
+          shares={789}
+        />
         
       </div>
     </div>
@@ -17,4 +32,3 @@ function App() {
 }
 
 export default App;
-
