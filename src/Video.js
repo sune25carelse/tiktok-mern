@@ -3,7 +3,7 @@ import './Video.css';
 import VideoFooter from './VideoFooter';
 import VideoSidebar from './VideoSidebar';
 
-function Video() {
+function Video({ url, channel, description, song, likes, shares, messages }) {
   const [playing, setPlyaing] = useState(false);
   const videoRef = useRef(null);
 
@@ -24,10 +24,15 @@ function Video() {
         className="video__player"
         loop
         ref={videoRef}
-        src="https://static.videezy.com/system/resources/previews/000/005/575/original/matrix.mp4"></video>
+        src={url}
+        ></video>
 
-      <VideoFooter />
-      <VideoSidebar />
+      <VideoFooter 
+        channels={channel} 
+        description={description}
+        song={song} 
+      />
+      <VideoSidebar likes={likes} shares={shares} messages={messages}/>
     </div>
   )
 }
