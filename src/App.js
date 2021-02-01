@@ -1,28 +1,37 @@
-import React from "react";
+import axios from "./axios";
+import React, { useEffect, useState } from "react";
 import './App.css';
 import Video from "./Video";
 
 function App() {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      const response = await axios.get('/v2/posts');
+      setVideos(response.data);
+
+      return response;
+    }
+    fetchPosts();
+  }, []);
+
   return (
     <div className="app">
       <div className="app__videos">
-        <Video url="https://static.videezy.com/system/resources/previews/000/005/575/original/matrix.mp4"
-              channel="luca"
-              song="kickin it late yeah"
-              likes={1223}
-              messages={456}
-              description="it f**kn works"
-              shares={789}
-        />
-        <Video 
-          url="https://static.videezy.com/system/resources/previews/000/005/575/original/matrix.mp4"
-          channel="luca"
-          song="Kickin it late yeah!!!"
-          likes={1223}
-          messages={456}
-          description="it works"
-          shares={789}
-        />
+        {videos.map(
+          ({url, channel, description, song, likes, shares, messages}) => (
+          <Video
+            url={url}
+            channel={channel}
+            description={description}
+            song={song}
+            likes={likes}
+            shares={shares}
+            messages={messages}
+          />
+          )
+        )}
       </div>
     </div>
   );
